@@ -6,10 +6,8 @@ const AddUserForm = props => {
 
   const handleInputChange = event => {
     const {name, value} = event.target;
-    console.log('name:', name, 'value:', value);
     setUser({...user, [name]: value})
   }
-
 
   return (
     <form
@@ -24,8 +22,8 @@ const AddUserForm = props => {
       <label>Name</label>
       <input type="text" name="name" value={user.name} onChange={handleInputChange} />
       <label>Username</label>
-      <input type="text" name="username" value={user.name} onChange={handleInputChange} />
-      <button onClick={props.addUser}>Add new user</button>
+      <input type="text" name="username" value={user.username} onChange={handleInputChange} />
+      <button>Add new user</button>
     </form>
   )
 }
