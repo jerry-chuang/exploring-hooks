@@ -28,12 +28,13 @@ const App = () => {
   }
 
   const deleteUser = id => {
+    // setEditing(false)
     setUsers(users.filter(user => user.id !== id))
   }
 
   const updateUser = (id, updatedUser) => {
     setEditing(false)
-  
+
     setUsers(users.map(user => (user.id === id ? updatedUser : user)))
   }
 
